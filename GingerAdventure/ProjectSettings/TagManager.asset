@@ -8,6 +8,7 @@ TagManager:
   - Trap
   - Ground
   - Enemy
+  - Knife
   layers:
   - Default
   - TransparentFX

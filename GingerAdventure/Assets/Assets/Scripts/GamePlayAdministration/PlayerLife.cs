@@ -4,25 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerLife : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    Slider slider;
-    public float healthPlayer = 100;
+    public float healthMax = 100.0f;
+    public float currentHealth;
+
+    public HealthBar healthBar;
     // Start is called before the first frame update
     private void Start()
     {
-        
+        currentHealth = healthMax;
+        healthBar.SetMaxHealth(healthMax);
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if(healthPlayer == 0f)
+        healthBar.SetHealth(currentHealth);
+        if(currentHealth <= 0f)
         {
-           
             Die();
             RestartLevel();
         }
@@ -34,8 +38,10 @@ public class PlayerLife : MonoBehaviour
         {
             Die();
         }
+      
     }
-   
+
+
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;

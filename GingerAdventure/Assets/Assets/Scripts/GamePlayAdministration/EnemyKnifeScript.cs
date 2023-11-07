@@ -35,7 +35,7 @@ public class EnemyKnifeScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerLife>().healthPlayer -= 20;
+            collision.gameObject.GetComponent<PlayerHealth>().currentHealth -= 20;
             Destroy(gameObject);
         }
       

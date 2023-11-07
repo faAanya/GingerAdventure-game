@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     public int maxHealth = 100;
     public int currentHealth; 
-    public HealthBar healthBar;
     //private bool isFacingRight = true;
     private float dirX = 0f;
   
@@ -33,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
-        healthBar.SetMaxField(maxHealth);
     }
     private void Update()
     {
