@@ -208,8 +208,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 170157502}
-        m_TargetAssemblyTypeName: GoToSettings, Assembly-CSharp
-        m_MethodName: GoSettingsMenu
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -266,9 +266,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 170157497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10de30d2f5355147a47f0cff3d5a814, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Settings
 --- !u!1 &178689632
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,8 +501,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 282493058}
-        m_TargetAssemblyTypeName: LevelChooser1, Assembly-CSharp
-        m_MethodName: OpenLevelChooser1
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -558,9 +559,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 282493052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ce402a0e276bc4485b295f5e5a7a56, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: LevelChooser1
 --- !u!1 &455024513
 GameObject:
   m_ObjectHideFlags: 0

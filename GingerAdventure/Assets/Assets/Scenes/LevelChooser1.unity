@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 68096785}
   - component: {fileID: 68096784}
   - component: {fileID: 68096783}
-  - component: {fileID: 68096782}
+  - component: {fileID: 68096786}
   m_Layer: 5
   m_Name: Arrow
   m_TagString: Untagged
@@ -163,18 +163,6 @@ RectTransform:
   m_AnchoredPosition: {x: -110, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &68096782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68096780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600c189b5d15faf4eaf8e83d0404ec1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &68096783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,9 +207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 68096782}
-        m_TargetAssemblyTypeName: LevelChooser2, Assembly-CSharp
-        m_MethodName: OpenLevelChooser2
+      - m_Target: {fileID: 68096786}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -269,6 +257,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68096780}
   m_CullTransparentMesh: 1
+--- !u!114 &68096786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68096780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: LevelChooser2
 --- !u!1 &123934942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,8 +1159,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1386615457}
-        m_TargetAssemblyTypeName: BackToMainMenuButton, Assembly-CSharp
-        m_MethodName: GoMainMenu
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1216,9 +1217,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1386615451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5de44a2043b65468cca3e769b8f24a, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: StartScreen
 --- !u!1 &1597078881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1573,7 @@ GameObject:
   - component: {fileID: 1940736233}
   - component: {fileID: 1940736232}
   - component: {fileID: 1940736231}
-  - component: {fileID: 1940736230}
+  - component: {fileID: 1940736234}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1599,18 +1601,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1940736230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940736228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b34831640d531f46942c832a8d51629, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1940736231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1655,9 +1645,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1940736230}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 1940736234}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1705,6 +1695,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940736228}
   m_CullTransparentMesh: 1
+--- !u!114 &1940736234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940736228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Level1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

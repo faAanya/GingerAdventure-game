@@ -156,7 +156,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1547874872}
-  m_Father: {fileID: 171125232}
+  m_Father: {fileID: 1816957286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -208,8 +208,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7528192}
-        m_TargetAssemblyTypeName: BackToMainMenuButton, Assembly-CSharp
-        m_MethodName: GoMainMenu
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -266,9 +266,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7528186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5de44a2043b65468cca3e769b8f24a, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: StartScreen
 --- !u!1 &171125228
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +365,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1816957286}
-  - {fileID: 7528187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1134,8 +1134,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1506198484}
-        m_TargetAssemblyTypeName: LevelChooser1, Assembly-CSharp
-        m_MethodName: OpenLevelChooser1
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1192,9 +1192,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506198479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32ce402a0e276bc4485b295f5e5a7a56, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: LevelChooser1
 --- !u!1 &1547874871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1362,7 @@ RectTransform:
   m_Children:
   - {fileID: 1007222542}
   - {fileID: 1506198480}
+  - {fileID: 7528187}
   m_Father: {fileID: 171125232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

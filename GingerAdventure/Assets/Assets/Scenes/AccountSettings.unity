@@ -887,8 +887,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 434340064}
-        m_TargetAssemblyTypeName: GoToLogIn, Assembly-CSharp
-        m_MethodName: OpenLogIn
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -945,9 +945,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 434340059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768518d8996bcd44d97345d2947870f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: LogIn
 --- !u!1 &542199673
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +961,7 @@ GameObject:
   - component: {fileID: 542199678}
   - component: {fileID: 542199677}
   - component: {fileID: 542199676}
-  - component: {fileID: 542199675}
+  - component: {fileID: 542199679}
   m_Layer: 5
   m_Name: BackToMainMenu
   m_TagString: Untagged
@@ -988,18 +989,6 @@ RectTransform:
   m_AnchoredPosition: {x: 123, y: -46}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &542199675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542199673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5de44a2043b65468cca3e769b8f24a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &542199676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,9 +1033,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 542199675}
-        m_TargetAssemblyTypeName: BackToMainMenuButton, Assembly-CSharp
-        m_MethodName: GoMainMenu
+      - m_Target: {fileID: 542199679}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1094,6 +1083,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542199673}
   m_CullTransparentMesh: 1
+--- !u!114 &542199679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542199673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Settings
 --- !u!1 &550121060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,8 +1181,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 550121065}
-        m_TargetAssemblyTypeName: GoToInfo, Assembly-CSharp
-        m_MethodName: OpenInfo
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1237,9 +1239,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 550121060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5ea8e12a126a14188ad44ec2e2981a, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: AccountInfo
 --- !u!1 &1029299239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,8 +1328,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1029299244}
-        m_TargetAssemblyTypeName: GoToRegister, Assembly-CSharp
-        m_MethodName: OpenRegister
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1383,9 +1386,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1029299239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c95f61d5a9e55f642ae7c0cd390c7604, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Registration
 --- !u!1 &1554527875
 GameObject:
   m_ObjectHideFlags: 0
