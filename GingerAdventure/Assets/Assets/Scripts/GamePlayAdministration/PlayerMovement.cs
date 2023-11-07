@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,14 +28,6 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private float dirX = 0f;
 
-    [Header("Dash")]
-    public float dashSpeed;
-    float startDashTime;
-    int direction;
-    float resetDash;
-    public float startResetDash;
-    bool dashing;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
+
+      
     }
     private void Update()
     {
@@ -54,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce); //jump
         }
-    
 
+       
         UpdateAnumationState();
     }
 
@@ -116,6 +111,8 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size,0f,Vector2.down, .1f, jumpableGround);
     }
+
+   
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;

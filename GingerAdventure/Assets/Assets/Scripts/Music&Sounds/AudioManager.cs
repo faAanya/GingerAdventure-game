@@ -8,18 +8,12 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource musicSourse;
     [SerializeField] AudioSource SFXSourse;
-    private GameObject startMenu;
 
     public AudioClip bg;
     public static AudioManager instance;
     private void Awake()
     {
-        if (startMenu)
-        {
-            musicSourse.playOnAwake = false;
-        }
-
-
+     
         if (instance == null)
         {
             instance = this;
@@ -31,6 +25,13 @@ public class AudioManager : MonoBehaviour
         }
     
      
+    }
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
+        {
+            musicSourse.Pause();
+        }
     }
 
     private void Start()
