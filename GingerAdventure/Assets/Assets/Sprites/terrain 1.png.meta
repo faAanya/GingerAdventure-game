@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e176e41205aac548a64cb3320f386ae
+guid: 1f3435bc6f4839a46a1897660976c34a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: death_0
+      name: terrain 1_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 63
-        width: 119
-        height: 98
+        x: 0
+        y: 329
+        width: 126
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c33f333f888f059489bc56906e4b61dc
-      internalID: 1863253978
+      spriteID: 6d7d3c596f7a13440bcbe1d2b32fe16a
+      internalID: -1378653597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain 1_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 427
+        width: 154
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cb9f0d2af23a845b39c8b6cdb230c1
+      internalID: 574683051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain 1_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 427
+        width: 154
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65d38392784591439c23aeab36f904f
+      internalID: -852215584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain 1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 126
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55e72e39d7946847a6eb404c411d18c
+      internalID: -687557784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain 1_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 203
+        width: 154
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98d60a36249c7e40a5ec2faa05b22ef
+      internalID: 71878743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain 1_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 203
+        width: 154
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a61b4b504bf73b4ba76c289531c56f0
+      internalID: 1295858800
       vertices: []
       indices: 
       edges: []
@@ -141,7 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      death_0: 1863253978
+      terrain 1_0: -1378653597
+      terrain 1_1: 574683051
+      terrain 1_2: -852215584
+      terrain 1_3: -687557784
+      terrain 1_4: 71878743
+      terrain 1_5: 1295858800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

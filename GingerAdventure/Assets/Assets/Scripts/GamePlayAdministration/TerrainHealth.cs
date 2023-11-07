@@ -8,7 +8,6 @@ public class TerrainHealth : MonoBehaviour
     public int health = 100;
     public GameObject terrain;
 
-
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -17,6 +16,15 @@ public class TerrainHealth : MonoBehaviour
             Die();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            TakeDamage(20);
+        }
+    }
+
     void Die()
     {
         Destroy(terrain);

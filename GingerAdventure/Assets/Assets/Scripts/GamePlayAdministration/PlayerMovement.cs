@@ -8,22 +8,32 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private BoxCollider2D coll;
-    private SpriteRenderer sprite;
+   
+    [Header("Animation")]
     private Animator anim;
-    public int maxHealth = 100;
-    public int currentHealth; 
-    //private bool isFacingRight = true;
-    private float dirX = 0f;
-  
+    private enum MovementState { stay, running, jumping, falling }
 
+    [Header("Health")]
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    [Header("Moving and Shooting")]
     [SerializeField] private float movesSpeed = 8f;
     [SerializeField] private float jumpForce = 16f;
     [SerializeField] private LayerMask jumpableGround;
- 
     [SerializeField] GameObject shotPoint;
-    private enum MovementState { stay, running, jumping, falling }
+    private Rigidbody2D rb;
+    private BoxCollider2D coll;
+    private SpriteRenderer sprite;
+    private float dirX = 0f;
+
+    [Header("Dash")]
+    public float dashSpeed;
+    float startDashTime;
+    int direction;
+    float resetDash;
+    public float startResetDash;
+    bool dashing;
 
     private void Start()
     {
