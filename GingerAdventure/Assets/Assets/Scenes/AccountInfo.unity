@@ -720,9 +720,9 @@ RectTransform:
   - {fileID: 1598770388}
   m_Father: {fileID: 1283144401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 123, y: -46}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -450, y: 200}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1182268227
@@ -828,9 +828,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1182268225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b5dbb157ce3d0f4e9f5199485c46426, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef72f5053791040bc80cf7c899ad8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Settings
 --- !u!1 &1283144397
 GameObject:
   m_ObjectHideFlags: 0

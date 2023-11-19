@@ -4,57 +4,100 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public Transform platform;
-    public Transform startPoint;
-    public Transform endPoint;
-    public float speed = 1.5f;
-    int dir = 1;
+    public Transform pointA, pointB;
+    //private Rigidbody2D rb;
+    //private Animator anim;
+    Vector2 currentPoint;
+    public float speed;
+
+    private void Start()
+    {
+        //rb = GetComponent<Rigidbody2D>();
+        //anim = GetComponent<Animator>();
+        //currentPoint = pointB.transform;
+        currentPoint = pointB.position;
+        //anim.SetBool("isRunning",true);
+    }
+
+
     private void Update()
     {
-        Vector2 target = currentMovementTarget();
+        //Vector2 point = currentPoint.position - transform.position;
 
-        platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
+        //if(currentPoint == pointB.transform)
+        //{
+        //    rb.velocity = new Vector2(speed, 0);
+        //}
+        //else
+        //{
+        //    rb.velocity = new Vector2(-speed, 0);
+        //}
 
-        float distance = (target - (Vector2)platform.position).magnitude;
+        //if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        //{
+        //    Flip();
+        //    currentPoint = pointA.transform;
+        //}
+        //if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+        //{
+        //    Flip();
+        //    currentPoint = pointB.transform;
+        //}
 
-        if (distance <= 0.1f)
+        if (Vector2.Distance(transform.position, pointA.position) < .1f)
         {
-            dir *= -1;
+            Flip();
+            currentPoint = pointB.position;
         }
+
+        if (Vector2.Distance(transform.position, pointB.position) < .1f)
+        {
+            Flip();
+            currentPoint = pointA.position;
+        }
+
+
+
+        transform.position = Vector2.MoveTowards(transform.position, currentPoint, speed * Time.deltaTime);
+
     }
 
-    Vector2 currentMovementTarget()
-    {
-        if (dir == 1)
-        {
-            return startPoint.position;
-        }
-        else
-        {
-            return endPoint.position;
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.SetParent(this.transform);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.SetParent(null);
-        }
-    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        collision.transform.SetParent(this.transform);
+    //    }
+    //}
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        collision.transform.SetParent(null);
+    //    }
+    //}
+
+
+    /// <summary>
+    /// Draws UI between start and end point 
+    /// </summary>
     private void OnDrawGizmos()
     {
-        if (platform != null && startPoint != null && endPoint != null)
-        {
-            Gizmos.DrawLine(platform.transform.position, startPoint.position);
-            Gizmos.DrawLine(platform.transform.position, endPoint.position);
-        }
+
+        //Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
+        //Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
+        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+
+    }
+
+    /// <summary>
+    /// Flips object by Ox axes
+    /// </summary>
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
     }
 }
-
