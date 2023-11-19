@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private float dirX = 0f;
 
+    [Header("Wall jumping")]
+    private Vector2 _wallNormal;
+    private bool _canWallJump;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -41,16 +45,19 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
 
-        dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * movesSpeed, rb.velocity.y); //moving
+
+            dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * movesSpeed, rb.velocity.y); //moving
+
+
+            if (Input.GetButtonDown("Jump") && IsGrounded()) //also checks is there is a ground
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce); //jump
+            }
         
 
-        if(Input.GetButtonDown("Jump") && IsGrounded()) //also checks is there is a ground
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce); //jump
-        }
 
-       
+    
         UpdateAnumationState();
     }
 
@@ -118,8 +125,8 @@ public class PlayerMovement : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("TriggerDeath");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
     }
 
-  
+
+
 }

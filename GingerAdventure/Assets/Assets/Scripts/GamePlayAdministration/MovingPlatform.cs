@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour
 
         float distance = (target - (Vector2)platform.position).magnitude;
 
-        if(distance <= 0.1f)
+        if (distance <= 0.1f)
         {
             dir *= -1;
         }
@@ -25,7 +25,7 @@ public class MovingPlatform : MonoBehaviour
 
     Vector2 currentMovementTarget()
     {
-        if(dir == 1)
+        if (dir == 1)
         {
             return startPoint.position;
         }
@@ -34,13 +34,27 @@ public class MovingPlatform : MonoBehaviour
             return endPoint.position;
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(this.transform);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
+    }
     private void OnDrawGizmos()
     {
-        if(platform != null && startPoint != null && endPoint != null)
+        if (platform != null && startPoint != null && endPoint != null)
         {
             Gizmos.DrawLine(platform.transform.position, startPoint.position);
             Gizmos.DrawLine(platform.transform.position, endPoint.position);
         }
     }
 }
+
