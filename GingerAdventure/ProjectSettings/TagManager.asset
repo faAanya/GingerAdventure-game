@@ -11,6 +11,7 @@ TagManager:
   - Knife
   - Bullet
   - Wall
+  - Ladder
   layers:
   - Default
   - TransparentFX
